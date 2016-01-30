@@ -1,0 +1,20 @@
+<head>
+  <title>virtual-scroll-demo</title>
+</head>
+
+<body>
+    <div class="hot-reload">
+        <button>Trigger hot reload</button>
+    </div>
+    {{> container}}
+</body>
+
+<template name="container">
+    <div class="container">
+        {{#virtualScroll params=virtualScrollParams}}
+            <div id="item{{virtualIndex}}" class="item">
+                <img src="http://placehold.it/400x200/{{item.color1}}/{{item.color2}}?text={{item.name}}" height="200">
+            </div>
+        {{/virtualScroll}}
+    </div>
+</template>

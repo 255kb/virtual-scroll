@@ -1,0 +1,18 @@
+<template name="virtualScroll">
+    <div class="virtual-scroll" id="virtual-scroll-{{params.namespace}}">
+        <div style="height:{{topFillerHeight}}px;"></div>
+
+        {{#each items}}
+            {{#virtualScrollItem itemsRenderedVar=itemsRenderedVar}}
+                {{> Template.contentBlock item=this virtualIndex=(virtualIndex @index)}}
+            {{/virtualScrollItem}}
+        {{/each}}
+
+        <div style="height:{{bottomFillerHeight}}px;"></div>
+    </div>
+</template>
+
+
+<template name="virtualScrollItem">
+    {{> Template.contentBlock}}
+</template>
