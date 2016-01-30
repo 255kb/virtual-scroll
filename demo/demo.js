@@ -1,8 +1,10 @@
+'use strict';
+
 let randomColor = function () {
     return Math.floor(Math.random()*16777215).toString(16);
 };
 
-testCollection = new Mongo.Collection('testCollection');
+let testCollection = new Mongo.Collection('testCollection');
 
 if (Meteor.isClient) {
     Template.container.onCreated(function () {

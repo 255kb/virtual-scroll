@@ -114,5 +114,8 @@ You can use it as follow in order to increase your subscription limit reactively
 
 ## Changelog
 
+### v0.1.1:
+- Added ecmascript dependency
+
 ### v0.1.0:
 - First release
